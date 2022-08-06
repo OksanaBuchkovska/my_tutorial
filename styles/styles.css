@@ -4,6 +4,7 @@
   --first-title-text-color: #212121;
   --second-title-text-color: #ffffff;
   --accent-color: #2196f3;
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -47,7 +48,6 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px solid red;
 }
 
 .link {
@@ -101,6 +101,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--first-title-text-color);
+  transition: color var(--timing-function);
 }
 
 .header-link:hover,
@@ -167,12 +168,15 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: var(--second-title-text-color);
   background-color: var(--accent-color);
+
+  transition: background-color var(--timing-function),
+    color var(--timing-function);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: #188ce8;
-  color: var(--second-title-text-color);
+  background-color: red;
+  color: var(--first-title-text-color);
 }
 
 /* Особливості */
