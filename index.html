@@ -1,205 +1,138 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebStudio</title>
+    <title>Barbershop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!--Шапка-->
     <header class="header">
-      <div class="container">
-        <nav class="header-nav">
-          <a href="./index.html" class="header-logo link" lang="en"
-            >Web<span class="header-studio">Studio</span></a
-          >
-          <ul class="header-list list">
-            <li class="item">
-              <a href="./index.html" class="header-link link current">Студія</a>
+      <div class="container header-container">
+        <a
+          href=""
+          class="logo header__logo animate__animated animate__rubberBand"
+        >
+          <svg class="logo__icon" width="68" height="55">
+            <use href="./img/icons.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <nav class="navigation">
+          <ul class="navigation__list list">
+            <li class="navigation__item">
+              <a
+                href="https://www.google.com/"
+                class="navigation__link link current"
+                >About</a
+              >
             </li>
-            <li class="item">
-              <a href="./portfolio.html" class="header-link link">Портфоліо</a>
+            <li class="navigation__item">
+              <a href="./test.html" class="navigation__link link"
+                >Services and prices</a
+              >
             </li>
-            <li class="item">
-              <a href="" class="header-link link">Контакти</a>
+            <li class="navigation__item">
+              <a href="#barbers" class="navigation__link link">Barbers</a>
+            </li>
+            <li class="navigation__item">
+              <a href="https://www.google.com/" class="navigation__link link"
+                >Contacts</a
+              >
             </li>
           </ul>
         </nav>
-        <ul class="contacts-list list">
-          <li class="item">
-            <a href="malito:info@devstudio.com" class="main-contacts link"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="main-contacts link"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="connect header__connect">
+          <a href="tel:+380441111111" class="connect__tel link"
+            >+38 044 111 11 11</a
+          >
+          <button type="button" class="connect__btn btn" data-modal-open>
+            Online-booking
+          </button>
+        </div>
+        <button class="menu-open" type="button">O</button>
+      </div>
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+            <button class="menu-close" type="button">X</button>
+            <nav class="mob-menu-nav">
+              <ul class="mob-menu-list list">
+                <li class="mob-menu-item">
+                  <a href="https://www.google.com/" class="mob-menu-link link"
+                    >About</a
+                  >
+                </li>
+                <li class="mob-menu-item">
+                  <a href="./test.html" class="mob-menu-link link"
+                    >Services and prices</a
+                  >
+                </li>
+                <li class="mob-menu-item">
+                  <a href="#barbers" class="mob-menu-link link">Barbers</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="https://www.google.com/" class="mob-menu-link link"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mob-menu-bottom">
+            <div class="connect mob-connect">
+              <a href="tel:+380441111111" class="mob-connect-tel link"
+                >+38 044 111 11 11</a
+              >
+              <button type="button" class="mob-connect-btn btn" data-modal-open>
+                Online-booking
+              </button>
+            </div>
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="mob-soc-link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc-item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  class="mob-soc-link link"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
-    <!--Головний контент-->
-    <main>
-      <!--Герой-->
-      <section class="hero section">
-        <div class="container">
-          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="hero-btn">Замовити послугу</button>
-        </div>
-      </section>
-      <!--Особливості-->
-      <section class="features section">
-        <div class="container">
-          <ul class="features-list">
-            <li class="features-item list">
-              <h4 class="features-title">увага до деталей</h4>
-              <p class="features-text">
-                Ідейні міркування, і навіть початок повсякденної роботи з
-                формування позиції.
-              </p>
-            </li>
-            <li class="features-item list">
-              <h4 class="features-title">пунктуальність</h4>
-              <p class="features-text">
-                Завдання організації, особливо рамки і місце навчання кадрів
-                тягне у себе.
-              </p>
-            </li>
-            <li class="features-item list">
-              <h4 class="features-title">планування</h4>
-              <p class="features-text">
-                Так само консультація з широким активом значною мірою зумовлює.
-              </p>
-            </li>
-            <li class="features-item list">
-              <h4 class="features-title">сучасні технології</h4>
-              <p class="features-text">
-                Значимість цих проблем настільки очевидна, що реалізація
-                планових завдань.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!--Робота-->
-      <section class="work section">
-        <div class="container">
-          <h2 class="work-title title">Чим ми займаємося</h2>
-          <ul class="work-list">
-            <li class="work-img list">
-              <img
-                src="./img/box3.jpg"
-                width="370"
-                height="294"
-                alt="Програмування"
-              />
-            </li>
-            <li class="work-img list">
-              <img
-                src="./img/box2.jpg"
-                width="370"
-                height="294"
-                alt="Адаптивна розробка"
-              />
-            </li>
-            <li class="work-img list">
-              <img src="./img/box3.jpg" width="370" height="294" alt="Дизайн" />
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!--Команда-->
-      <section class="team section">
-        <div class="container">
-          <h2 class="team-title title">Наша команда</h2>
-          <ul class="team-list">
-            <li class="team-item list">
-              <img
-                src="./img/img4.jpg"
-                width="270"
-                height="260"
-                alt="Ігор Дем'яненко"
-              />
-              <h3 class="team-subtitle">Ігор Дем'яненко</h3>
-              <p class="team-text">Product Designer</p>
-            </li>
-            <li class="team-item list">
-              <img
-                src="./img/img1.jpg"
-                width="270"
-                height="260"
-                alt="Ольга Репіна"
-              />
-              <h3 class="team-subtitle">Ольга Репіна</h3>
-              <p class="team-text">Frontend Developer</p>
-            </li>
-            <li class="team-item list">
-              <img
-                src="./img/img2.jpg"
-                width="270"
-                height="260"
-                alt="Микола Тарасов"
-              />
-              <h3 class="team-subtitle">Микола Тарасов</h3>
-              <p class="team-text">Marketing</p>
-            </li>
-            <li class="team-item list">
-              <img
-                src="./img/img3.jpg"
-                width="270"
-                height="260"
-                alt="Михайло Єрмаков"
-              />
-              <h3 class="team-subtitle">Михайло Єрмаков</h3>
-              <p class="team-text">UI Designer</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <!--Підвал-->
-    <footer class="footer">
-      <div class="container">
-        <a href="./index.html" class="logo link" lang="en"
-          >Web<span class="footer-studio">Studio</span></a
-        >
-        <address class="address">
-          <ul class="address-list">
-            <li class="address-item list">
-              <a
-                href="https://goo.gl/maps/ovXxqonvcfYevfHi6"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="main-address link"
-                >м.Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li class="address-item list">
-              <a href="malito:info@example.com" class="main-contacts email link"
-                >info@example.com</a
-              >
-            </li>
-            <li class="address-item list">
-              <a href="tel:+380991111111" class="main-contacts tel link"
-                >+38 099 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
-      </div>
-    </footer>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
